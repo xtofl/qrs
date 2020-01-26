@@ -7,7 +7,14 @@ test -z "$PREFIX" && printf "You could specify a filename PREFIX\n"
 
 MESSAGE="ontbijt_voor_nablus" \
 PREFIX=${PREFIX-qr-} \
-N=${N-20} ./generate-n.sh
+N=${N-20} \
+./generate-n.sh
 
+echo "creating zip file"
 zip qrs.zip *.png
+
+echo "creating print sheet"
+./print-sheet.sh
+
+echo "removing pngs"
 rm *.png
