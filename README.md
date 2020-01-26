@@ -15,6 +15,6 @@ who really came.
 1. choose a text that identifies your party ("Tara's balloon fest")
 1. choose a secret ("notgonnatellyou")
 1. generate qr codes
-    MESSAGE="Tara's balloon fest" SECRET="notgonnatellyou" N=100 ./party-qrs.sh
+    COLUMNS=2 MESSAGE="Tara's balloon fest" SECRET="notgonnatellyou" N=100 ./party-qrs.sh
 
-Now the script will generate 200 QR codes into a zip file.
+Now the script will generate an html file with 200 QR codes into a zip file.
